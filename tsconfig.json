@@ -9,7 +9,7 @@
 		"esModuleInterop": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
-		"outDir": "./dist",
+		"outDir": "dist",
 		"declaration": true,
 		"moduleResolution": "node",
 		"experimentalDecorators": true,

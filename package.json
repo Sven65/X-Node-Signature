@@ -2,7 +2,8 @@
   "name": "x-node-signature",
   "version": "1.0.0",
   "description": "Payload signature verification and generation for Node",
-  "main": "dist/index.js",
+  "main": "dist/src/Signature.js",
+  "types": "dist/src/Signature.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc -p ./"
