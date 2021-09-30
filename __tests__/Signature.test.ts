@@ -1,4 +1,4 @@
-import { Signature } from "../src/Signature"
+import Signature from "../src/Signature"
 
 const secret = "8e1138dbb41c5726420bd0c909ecb9a70ea01eff"
 const payload = {hello: "world"}

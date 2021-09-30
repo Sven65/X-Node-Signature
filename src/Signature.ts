@@ -7,7 +7,7 @@ type SignatureScheme = 'v1'
 
 export const generatePayloadString = (payload: Record<string, any>): string => JSON.stringify(payload, null, 2).replace(/\r/gmi, '')
 
-export class Signature {
+export default class Signature {
 	static EXPECTED_SCHEME: SignatureScheme = 'v1'
 
 	private static parseHeader = (header: string, scheme: string) => {
