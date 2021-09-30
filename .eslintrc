@@ -1,0 +1,59 @@
+{
+	"root": true,
+	"env": {
+		"es6": true,
+		"node": true,
+		"es2020": true,
+		"jest/globals": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"sourceType": "module",
+		"project": "./tsconfig.json"
+	},
+	"ignorePatterns": "dist/*",
+	"rules": {
+		"no-case-declarations": "off",
+		"no-constant-condition": ["error", { "checkLoops": false }],
+		"semi": [
+				"error",
+				"never"
+		],
+		"eol-last": ["error", "always"],
+		"@typescript-eslint/no-unused-vars": ["error", {"args":"after-used"}],
+		"indent": [ 2, "tab", { "SwitchCase": 1 } ],
+		"operator-linebreak": ["error", "before"],
+		"comma-dangle": [ "error", "always-multiline" ],
+		"quote-props": [ "error", "as-needed" ],
+		"quotes": ["error", "single", { "avoidEscape": true }],
+		"array-bracket-spacing": ["error", "always", { "singleValue": false }],
+		"import/no-unresolved": [ 0 ],
+		"prefer-reflect": [ 0 ],
+		"no-undef": ["error", { "typeof": true }],
+		"no-console": "off",
+		"object-curly-spacing": ["error", "always"],
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/ban-ts-comment": "off",
+		"@typescript-eslint/explicit-module-boundary-types": ["error", {
+			"allowArgumentsExplicitlyTypedAsAny": true,
+			"allowTypedFunctionExpressions": true
+		}],
+		"@typescript-eslint/restrict-template-expressions": ["error", {
+			"allowAny": true,
+			"allowBoolean": true
+		}],
+		"space-before-function-paren": ["warn", {
+			"anonymous": "always",
+			"named": "never",
+			"asyncArrow": "always"
+		}],
+		"keyword-spacing": "error",
+		"space-before-blocks": "error"
+	}
+}
