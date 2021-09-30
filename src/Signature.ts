@@ -43,6 +43,14 @@ export class Signature {
 			.digest('hex')
 	}
 
+	/**
+	 * Verifies that a header matches the payload
+	 * @param payload The payload string to verify
+	 * @param header The header to validate
+	 * @param secret The secret the header should have been created with
+	 * @param tolerance The timestamp tolerance
+	 * @returns If the header is valid for the payload
+	 */
 	static verifyHeader(payload: string | Buffer, header: string | Buffer, secret: string, tolerance=300): boolean  {
 		payload = Buffer.isBuffer(payload) ? payload.toString('utf8') : payload
 
@@ -111,6 +119,13 @@ export class Signature {
 		return true
 	}
 
+	/**
+	 * Generates a signature for a payload
+	 * @param payload The payload to generate a signature for
+	 * @param secret The secret to generate the signature with
+	 * @param timestamp Timestamp for when the signature is created
+	 * @returns The generated signature
+	 */
 	static generateHeader(payload: string | Record<string, any>, secret: string, timestamp?: number): string {
 		if (typeof payload === 'object') {
 			payload = generatePayloadString(payload)
